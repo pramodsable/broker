@@ -43,5 +43,3 @@ public class ApplicationConfiguration extends WebMvcConfigurerAdapter {
 		registry.addResourceHandler("/resources/**").addResourceLocations("/resources/");
 	}
 }
-
-// nuro sergon
