@@ -19,7 +19,7 @@ public class HomeController {
 
 		model.addAttribute("name", "John Doe");
 		System.out.println("LOGIN INITIATED");
-		return "home1";
+		return "home";
 	}
 
 }

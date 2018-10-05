@@ -1,3 +1,6 @@
+
+
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +12,10 @@
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script
+	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 <style>
 /* Remove the navbar's default margin-bottom and rounded borders */
 .navbar {
@@ -41,6 +47,7 @@ footer {
 
 	<nav class="navbar navbar-inverse">
 		<div class="container-fluid">
+
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle" data-toggle="collapse"
 					data-target="#myNavbar">
@@ -51,7 +58,19 @@ footer {
 			</div>
 			<div class="collapse navbar-collapse" id="myNavbar">
 				<ul class="nav navbar-nav">
-					<li class="active"><a href="#">Home</a></li>
+					<li class="active"><a href="#" class="dropdown">Home</a></li>
+					<li class="active"><a href="#" class="dropdown"
+						data-toggle="dropdown">Sell</a>
+						<div class="dropdown-menu">
+							<ul>
+								<li><a href="${pageContext.request.contextPath}/house">HOME</a></li>
+								<li><a href="#">Flat</a></li>
+								<li><a href="#">Farm</a></li>
+								<li><a href="#">Row House</a></li>
+							</ul>
+						</div></li>
+					<li><a href="#">Buy</a></li>
+					<li><a href="#">Rent</a></li>
 					<li><a href="#">About</a></li>
 					<li><a href="#">Projects</a></li>
 					<li><a href="#">Contact</a></li>
