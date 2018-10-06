@@ -1,12 +1,63 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
-</head>
-<body>
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog" style="width: 100%">
+	<div class="modal-dialog">
 
-</body>
-</html>
+		<!-- Modal content-->
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title">Edit House</h4>
+			</div>
+			<div class="modal-body">
+				<form action="/house">
+					<div class="form-group">
+						<div class="row">
+							<div class="col-md-4">
+								<div>
+									<div class="col-md-12">
+										<input type="text" class="form-control"
+											placeholder="First Name">
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div>
+									<div class="col-md-12">
+										<input type="text" class="form-control"
+											placeholder="Last Name">
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div>
+									<div class="col-md-12">
+										<input type="text" class="form-control"
+											placeholder="Mobile Number">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="row">
+							<div class="col-md-8"></div>
+							<div class="col-md-4">
+								<div class="col-md-6">
+									<button type="submit" class="btn btn-success">Search</button>
+								</div>
+								<div class="col-md-6">
+									<button type="button" class="btn btn-primary"
+										data-toggle="modal" data-target="#myModal">Create</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			</div>
+		</div>
+
+	</div>
+</div>
