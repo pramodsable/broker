@@ -1,5 +1,7 @@
 package com.brocker.model;
 
+import java.io.Serializable;
+
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
@@ -9,8 +11,8 @@ import javax.persistence.Table;
  *
  */
 @Entity
-@Table(name = "BROC_HOUSING")
-public class HousingPropertyModel extends BaseModel {
+@Table(name = "BROC_HOUSE")
+public class HouseModel extends BaseModel implements Serializable {
 	/**
 	 * property name
 	 */

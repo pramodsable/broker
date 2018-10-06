@@ -3,6 +3,11 @@ package com.brocker.daoImpl;
 import java.io.Serializable;
 import java.util.List;
 
+import org.hibernate.Criteria;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+
 /**
  * 
  * @author Avinash
@@ -10,7 +15,10 @@ import java.util.List;
  * @param <T>
  * @param <ID>
  */
-public class BaseDaoImpl<T, ID extends Serializable> {
+public class GenericDao<T, ID extends Serializable> {
+	@Autowired
+	private SessionFactory sessionFactory;
+
 	/**
 	 * 
 	 * @param entity
@@ -46,9 +54,12 @@ public class BaseDaoImpl<T, ID extends Serializable> {
 	 * @param entity
 	 * @return
 	 */
+	@SuppressWarnings("unchecked")
 	public List<T> getAll(T entity) {
-		// TODO Auto-generated method stub
-		return null;
+		Session session = getSession();
+		Criteria criteria = session.createCriteria(entity.getClass());
+		List<T> listHouse = criteria.list();
+		return listHouse;
 	}
 
 	/**
@@ -79,6 +90,11 @@ public class BaseDaoImpl<T, ID extends Serializable> {
 	public T findByName(String name) {
 		// TODO Auto-generated method stub
 		return null;
+	}
+
+	public Session getSession() {
+		return sessionFactory.openSession();
+
 	}
 
 }
