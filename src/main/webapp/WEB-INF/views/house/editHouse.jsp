@@ -38,24 +38,11 @@
 							</div>
 						</div>
 					</div>
-					<div class="form-group">
-						<div class="row">
-							<div class="col-md-8"></div>
-							<div class="col-md-4">
-								<div class="col-md-6">
-									<button type="submit" class="btn btn-success">Search</button>
-								</div>
-								<div class="col-md-6">
-									<button type="button" class="btn btn-primary"
-										data-toggle="modal" data-target="#myModal">Create</button>
-								</div>
-							</div>
-						</div>
-					</div>
 				</form>
 			</div>
 			<div class="modal-footer">
-				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				<button type="button" class="btn btn-success">Save</button>
+				<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
 			</div>
 		</div>
 
