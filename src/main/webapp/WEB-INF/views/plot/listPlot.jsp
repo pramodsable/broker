@@ -31,7 +31,7 @@
 </script>
 </head>
 <body>
-	<jsp:include page="addHouse.jsp"></jsp:include>
+	<jsp:include page="addPlot.jsp"></jsp:include>
 	<div>
 		<nav class="navbar navbar-inverse">
 			<div class="container-fluid">

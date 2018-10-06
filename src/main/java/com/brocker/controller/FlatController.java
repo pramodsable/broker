@@ -7,29 +7,30 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 
 @Controller
-public class HouseController {
+public class FlatController {
 
-	@GetMapping(value = "/house")
+	@GetMapping(value = "/flat")
 	public String get() {
-//		return "house/listHouse";
-		return "house/listHouse";
+		return "flat/listFlat";
+
 	}
 
-	@PutMapping(value = "/house")
+	@PutMapping(value = "/flat")
 	public String edit() {
-		return "house/editHouse";
+		return "flat/editFlat";
 
 	}
 
-	@DeleteMapping(value = "/house")
+	@DeleteMapping(value = "/flat")
 	public String delete() {
-		return "house/deleteHouse";
+		return "flat/deleteFlat";
 
 	}
 
-	@PostMapping(value = "/house")
+	@PostMapping(value = "/flat")
 	public String add() {
-		return "house/addHouse";
+		return "flat/addFlat";
 
 	}
+
 }
