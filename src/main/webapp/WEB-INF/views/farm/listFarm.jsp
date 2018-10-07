@@ -1,11 +1,10 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+<%@page pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <title>Bootstrap Example</title>
-<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/> 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet"
 	href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
@@ -25,9 +24,9 @@
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script type="text/javascript">
-	$(document).ready(function() {
-		$('#example').DataTable();
-	});
+$(document).ready(function() {
+//	$('#example').DataTable();
+});
 </script>
 </head>
 <body>
@@ -51,7 +50,7 @@
 							<div class="dropdown-menu">
 								<ul>
 									<%-- <li><a href="${pageContext.request.contextPath}/house">HOME</a></li> --%>
-									<li><a href="<%=request.getContextPath()%>/house">House</a></li>
+									<li><a href="<%=request.getContextPath()%>/house"><label id="home">Home</label></a></li>
 									<li><a href="<%=request.getContextPath()%>/flat">Flat</a></li>
 									<li><a href="<%=request.getContextPath()%>/farm">Farm</a></li>
 									<li><a href="<%=request.getContextPath()%>/rowHouse">Row

@@ -1,3 +1,4 @@
+
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
@@ -5,8 +6,7 @@
 <html lang="en">
 <head>
 <title>Bootstrap Example</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/> 
 <link rel="stylesheet"
 	href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 <link rel="stylesheet"
@@ -27,6 +27,16 @@
 <script type="text/javascript">
 	$(document).ready(function() {
 		$('#example').DataTable();
+		var lang = {};
+		lang["en"] = {
+			add_Home : "Add Home",
+		};
+		lang["es"] = {
+				add_Home : "Hola Mundo!",
+		};
+		CurrentLang="en";
+		// later somewhere down in my code:
+		alert(lang[CurrentLang].hello_world);
 	});
 </script>
 </head>

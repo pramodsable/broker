@@ -1,3 +1,4 @@
+<%@page pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html lang="en">
@@ -13,7 +14,7 @@
 	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
+<script src="<%=request.getContextPath()%>/resources/js/i18.js"></script>
 <style>
 /* Remove the navbar's default margin-bottom and rounded borders */
 .navbar {
@@ -62,17 +63,26 @@ footer {
 						<div class="dropdown-menu">
 							<ul>
 								<%-- <li><a href="${pageContext.request.contextPath}/house">HOME</a></li> --%>
-								<li><a href="<%=request.getContextPath() %>/house">House</a></li>
-								<li><a href="<%=request.getContextPath() %>/flat">Flat</a></li>
-								<li><a href="<%=request.getContextPath() %>/farm">Farm</a></li>
-								<li><a href="<%=request.getContextPath() %>/rowHouse">Row House</a></li>
+								<li><a href="<%=request.getContextPath()%>/house"><label id="home">Home</label></a></li>
+								<li><a href="<%=request.getContextPath()%>/flat">Flat</a></li>
+								<li><a href="<%=request.getContextPath()%>/farm"><label id="farm">Farm</label></a></li>
+								<li><a href="<%=request.getContextPath()%>/rowHouse">Row
+										House</a></li>
 							</ul>
 						</div></li>
-					<li><a href="<%=request.getContextPath() %>/buy">Buy</a></li>
-					<li><a href="<%=request.getContextPath() %>/rent">Rent</a></li>
-					<li><a href="<%=request.getContextPath() %>/about">About</a></li>
-					<li><a href="<%=request.getContextPath() %>/projects">Projects</a></li>
-					<li><a href="<%=request.getContextPath() %>/contact">Contact</a></li>
+					<li><a href="<%=request.getContextPath()%>/buy">Buy</a></li>
+					<li><a href="<%=request.getContextPath()%>/rent">Rent</a></li>
+					<li><a href="<%=request.getContextPath()%>/about">About</a></li>
+					<li><a href="<%=request.getContextPath()%>/projects">Projects</a></li>
+					<li><a href="<%=request.getContextPath()%>/contact">Contact</a></li>
+					<li><a href="#" class="dropdown" data-toggle="dropdown">Language</a>
+						<div class="dropdown-menu">
+								<ul>
+									<li><a onclick="language('eng')">English</a></li>
+									<li><a onclick="language('mar')">Marathi</a></li>
+								</ul>
+							</div>
+						</li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
 					<li><a href="#"><span class="glyphicon glyphicon-log-in"></span>
@@ -92,7 +102,8 @@ footer {
 		<!-- Wrapper for slides -->
 		<div class="carousel-inner" role="listbox">
 			<div class="item active">
-				<img src="https://placehold.it/1200x400?text=IMAGE" alt="Image">
+				<img src="<c:url value="/resources/images/home_img_1.jpg" />"
+					alt="Image">
 				<div class="carousel-caption">
 					<h3>Sell $</h3>
 					<p>Money Money.</p>
@@ -100,7 +111,7 @@ footer {
 			</div>
 
 			<div class="item">
-				<img src="https://placehold.it/1200x400?text=Another Image Maybe"
+				<img src="<c:url value="/resources/images/home_img_2.jpg" />"
 					alt="Image">
 				<div class="carousel-caption">
 					<h3>More Sell $</h3>
@@ -125,12 +136,12 @@ footer {
 		<br>
 		<div class="row">
 			<div class="col-sm-4">
-				<img src="https://placehold.it/150x80?text=IMAGE"
+				<img src="<c:url value="/resources/images/home_img_3.jpg"/>"
 					class="img-responsive" style="width: 100%" alt="Image">
 				<p>Current Project</p>
 			</div>
 			<div class="col-sm-4">
-				<img src="https://placehold.it/150x80?text=IMAGE"
+				<img src="<c:url value="/resources/images/home_img.jpg" />"
 					class="img-responsive" style="width: 100%" alt="Image">
 				<p>Project 2</p>
 			</div>
