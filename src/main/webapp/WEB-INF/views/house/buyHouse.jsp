@@ -1,11 +1,10 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+<%@page pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Bootstrap Example</title>
-<meta charset="utf-8">
+<title>Buy House</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet"
 	href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
@@ -26,12 +25,11 @@
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script type="text/javascript">
 	$(document).ready(function() {
-		$('#example').DataTable();
+		//	$('#example').DataTable();
 	});
 </script>
 </head>
 <body>
-	<jsp:include page="addFlat.jsp"></jsp:include>
 	<div>
 		<nav class="navbar navbar-inverse">
 			<div class="container-fluid">
@@ -51,11 +49,12 @@
 							<div class="dropdown-menu">
 								<ul>
 									<%-- <li><a href="${pageContext.request.contextPath}/house">HOME</a></li> --%>
-									<li><a href="<%=request.getContextPath()%>/house"><label id="home">Home</label></a></li>
+									<li><a href="<%=request.getContextPath()%>/house"><label
+											id="home">House</label></a></li>
 									<li><a href="<%=request.getContextPath()%>/flat">Flat</a></li>
 									<li><a href="<%=request.getContextPath()%>/farm">Farm</a></li>
-									<li><a href="<%=request.getContextPath()%>/rowHouse">Row
-											House</a></li>
+									<li><a href="<%=request.getContextPath()%>/plot">plot
+									</a></li>
 								</ul>
 							</div></li>
 						<li><a href="<%=request.getContextPath()%>/buy">Buy</a></li>
@@ -63,6 +62,7 @@
 						<li><a href="<%=request.getContextPath()%>/about">About</a></li>
 						<li><a href="<%=request.getContextPath()%>/projects">Projects</a></li>
 						<li><a href="<%=request.getContextPath()%>/contact">Contact</a></li>
+
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
 						<li><a href="#"><span class="glyphicon glyphicon-log-in"></span>
@@ -73,39 +73,90 @@
 		</nav>
 	</div>
 	<div class="container">
-		<form action="/house">
+		<form action="/buyFarm">
 			<div class="form-group">
 				<div class="row">
 					<div class="col-md-4">
 						<div>
 							<div class="col-md-6">
-								<label>First Name</label>
+								<label>Select House Type</label>
 							</div>
 							<div class="col-md-6">
-								<input type="text" class="form-control">
+								<select>
+									<option value="0">Select</option>
+									<option value="#">< Duplex</option>
+									<option value="#">< Row House</option>
+									<option value="#">< Row Bunglow</option>
+								</select>
 							</div>
 						</div>
 					</div>
 					<div class="col-md-4">
 						<div>
 							<div class="col-md-6">
-								<label>Last Name</label>
+								<label>Select Price </label>
 							</div>
 							<div class="col-md-6">
-								<input type="text" class="form-control">
+								<select>
+									<option value="#">Select</option>
+									<option value="#">< 10 Rs</option>
+									<option value="#">< 15 Rs</option>
+									<option value="#">< 20 Rs</option>
+									<option value="#">> 20 Rs</option>
+								</select>
 							</div>
 						</div>
+
 					</div>
-					<div class="col-md-4">
+
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="row ">
+					<div class="col-md-12">
 						<div>
-							<div class="col-md-6">
-								<label>Mobile Number</label>
+							<div class="col-md-2">
+								<label>select Area</label>
 							</div>
-							<div class="col-md-6">
-								<input type="text" class="form-control">
+							<div class="col-md-2">
+								<select>
+									<option value="">State</option>
+									<option value="#">Maharashtra</option>
+									<option value="#">Telangana</option>
+									<option value="#">Ap</option>
+								</select>
 							</div>
+							<div class="col-md-2">
+								<select>
+									<option value="">District</option>
+									<option value="#">Aurangabad</option>
+									<option value="#">Jalna</option>
+									<option value="#">Beed</option>
+									<option value="#">Buldhana</option>
+								</select>
+							</div>
+							<div class="col-md-2">
+								<select>
+									<option value="">Tehsil</option>
+									<option value="#">Kannad</option>
+									<option value="#">Paithan</option>
+									<option value="#">Phulambri</option>
+									<option value="#">Sillod</option>
+								</select>
+							</div>
+							<div class="col-md-2">
+								<select>
+									<option value="">Post</option>
+									<option value="#">Chapaner</option>
+									<option value="#">Hatnur</option>
+									<option value="#">Jaitapur</option>
+									<option value="#">Kheda</option>
+								</select>
+							</div>
+
 						</div>
 					</div>
+
 				</div>
 			</div>
 			<div class="form-group">
@@ -113,15 +164,16 @@
 					<div class="col-md-8"></div>
 					<div class="col-md-4">
 						<div class="col-md-6">
-							<button type="submit" class="btn btn-success">Search</button>
+							<button type="submit" class="btn btn-success">Filter</button>
 						</div>
 						<div class="col-md-6">
 							<button type="button" class="btn btn-primary" data-toggle="modal"
-								data-target="#addFlat">Create</button>
+								data-target="#addFarm">Cancel</button>
 						</div>
 					</div>
 				</div>
 			</div>
+
 		</form>
 		<div>
 			<table id="example" class="display" style="width: 100%">
@@ -278,5 +330,6 @@
 			</table>
 		</div>
 	</div>
+
 </body>
 </html>

@@ -116,7 +116,7 @@ $(document).ready(function() {
 						</div>
 						<div class="col-md-6">
 							<button type="button" class="btn btn-primary" data-toggle="modal"
-								data-target="#myModal">Create</button>
+								data-target="#addFarm">Create</button>
 						</div>
 					</div>
 				</div>
