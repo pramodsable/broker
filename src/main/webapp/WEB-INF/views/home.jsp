@@ -62,8 +62,7 @@ footer {
 						data-toggle="dropdown">Sell</a>
 						<div class="dropdown-menu">
 							<ul>
-								<%-- <li><a href="${pageContext.request.contextPath}/house">HOME</a></li> --%>
-								<li><a href="<%=request.getContextPath()%>/house"><label id="home">Home</label></a></li>
+								<li><a href="<%=request.getContextPath()%>/house"><label id="home">house</label></a></li>
 								<li><a href="<%=request.getContextPath()%>/flat">Flat</a></li>
 								<li><a href="<%=request.getContextPath()%>/farm"><label id="farm">Farm</label></a></li>
 								<li><a href="<%=request.getContextPath()%>/rowHouse">Row

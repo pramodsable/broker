@@ -25,19 +25,16 @@
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script type="text/javascript">
 $(document).ready(function() {
-//	$('#example').DataTable();
+	$('#farm_tbl').DataTable();
 });
 </script>
 </head>
 <body>
 	<jsp:include page="addFarm.jsp"></jsp:include>
-	<div>
+	
 	
 		<%@include file="../header.jsp" %>
-				</div>
-				<div class="collapse navbar-collapse" id="myNavbar">
-					
-	</div>
+				
 	
 	<div class="container">
 		<form action="/house">
@@ -91,7 +88,7 @@ $(document).ready(function() {
 			</div>
 		</form>
 		<div>
-			<table id="example" class="display" style="width: 100%">
+			<table id="farm_tbl" class="display" style="width: 100%">
 				<thead>
 					<tr>
 						<th>Name</th>

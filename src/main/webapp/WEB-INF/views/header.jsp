@@ -26,7 +26,6 @@
 							data-toggle="dropdown">Sell</a>
 							<div class="dropdown-menu">
 								<ul>
-									<%-- <li><a href="${pageContext.request.contextPath}/house">HOME</a></li> --%>
 									<li><a href="<%=request.getContextPath()%>/house">House</a></li>
 									<li><a href="<%=request.getContextPath()%>/flat">Flat</a></li>
 									<li><a href="<%=request.getContextPath()%>/farm">Farm</a></li>
@@ -39,7 +38,16 @@
 						<li><a href="<%=request.getContextPath()%>/about">About</a></li>
 						<li><a href="<%=request.getContextPath()%>/projects">Projects</a></li>
 						<li><a href="<%=request.getContextPath()%>/contact">Contact</a></li>
-					</ul>
+						<li><a href="#" class="dropdown" data-toggle="dropdown">Language</a>
+						<div class="dropdown-menu">
+								<ul>
+									<li><a onclick="language('eng')">English</a></li>
+									<li><a onclick="language('mar')">Marathi</a></li>
+								</ul>
+							</div>
+						</li>
+				</ul>
+					
 					<ul class="nav navbar-nav navbar-right">
 						<li><a href="#"><span class="glyphicon glyphicon-log-in"></span>
 								Login</a></li>

@@ -1,6 +1,6 @@
 <!-- Modal -->
 <div id="myModal" class="modal fade" role="dialog" style="width: 100%">
-	<div class="modal-dialog">
+	<div class="modal-dialog " style="width: 60%;">
 
 		<!-- Modal content-->
 		<div class="modal-content">
@@ -94,12 +94,14 @@
 						</div>
 					</div>
 				</form>
+				
 			</div>
-		</div>
-		<div class="modal-footer">
+			<div class="modal-footer">
 			<button type="button" class="btn btn-success">Save</button>
 			<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
 		</div>
+		</div>
+		
 	</div>
 
 </div>
