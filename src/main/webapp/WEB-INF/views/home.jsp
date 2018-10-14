@@ -64,24 +64,35 @@ footer {
 							<ul>
 								<li><a href="<%=request.getContextPath()%>/house"><label id="home">house</label></a></li>
 								<li><a href="<%=request.getContextPath()%>/flat">Flat</a></li>
-								<li><a href="<%=request.getContextPath()%>/farm"><label id="farm">Farm</label></a></li>
-								<li><a href="<%=request.getContextPath()%>/rowHouse">Row
-										House</a></li>
+								<li><a href="<%=request.getContextPath()%>/farm"><label
+										id="farm">Farm</label></a></li>
+								<li><a href="<%=request.getContextPath()%>/plot">Plot</a></li>
 							</ul>
 						</div></li>
-					<li><a href="<%=request.getContextPath()%>/buy">Buy</a></li>
+					<li class="active"><a href="#" class="dropdown"
+						data-toggle="dropdown">Buy</a>
+						<div class="dropdown-menu">
+							<ul>
+								<li><a href="<%=request.getContextPath()%>/buyHouse"><label
+										id="buyHouse">House</label></a></li>
+								<li><a href="<%=request.getContextPath()%>/buyFlat">Flat</a></li>
+								<li><a href="<%=request.getContextPath()%>/buyFarm"><label
+										id="farm">Farm</label></a></li>
+								<li><a href="<%=request.getContextPath()%>/buyPlot">Plot</a></li>
+							</ul>
+						</div></li>
+
 					<li><a href="<%=request.getContextPath()%>/rent">Rent</a></li>
 					<li><a href="<%=request.getContextPath()%>/about">About</a></li>
 					<li><a href="<%=request.getContextPath()%>/projects">Projects</a></li>
 					<li><a href="<%=request.getContextPath()%>/contact">Contact</a></li>
 					<li><a href="#" class="dropdown" data-toggle="dropdown">Language</a>
 						<div class="dropdown-menu">
-								<ul>
-									<li><a onclick="language('eng')">English</a></li>
-									<li><a onclick="language('mar')">Marathi</a></li>
-								</ul>
-							</div>
-						</li>
+							<ul>
+								<li><a onclick="language('eng')">English</a></li>
+								<li><a onclick="language('mar')">Marathi</a></li>
+							</ul>
+						</div></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
 					<li><a href="#"><span class="glyphicon glyphicon-log-in"></span>
