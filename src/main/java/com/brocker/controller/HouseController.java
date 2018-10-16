@@ -21,6 +21,10 @@ public class HouseController {
 	@GetMapping(value = "/house")
 	public String get() {
 		List<HouseDto> listHouse = houseService.listHouse();
+		for (HouseDto houseDto : listHouse) {
+			System.out.println("################"+houseDto.getName());
+		}
+		
 		return "house/listHouse";
 	}
 

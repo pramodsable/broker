@@ -36,7 +36,6 @@
 		};
 		CurrentLang="en";
 		// later somewhere down in my code:
-		alert(lang[CurrentLang].hello_world);
 	});
 </script>
 </head>

@@ -6,6 +6,7 @@ import java.util.List;
 import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
 import org.springframework.beans.factory.annotation.Autowired;
 
 /**
@@ -25,7 +26,11 @@ public class GenericDao<T, ID extends Serializable> {
 	 * @return
 	 */
 	public T create(T entity) {
-		// TODO Auto-generated method stub
+		Session session = getSession();
+		Transaction transaction = session.beginTransaction();
+		session.save(entity);
+		transaction.commit();
+		session.close();
 		return null;
 	}
 
@@ -59,6 +64,7 @@ public class GenericDao<T, ID extends Serializable> {
 		Session session = getSession();
 		Criteria criteria = session.createCriteria(entity.getClass());
 		List<T> listHouse = criteria.list();
+		session.close();
 		return listHouse;
 	}
 
