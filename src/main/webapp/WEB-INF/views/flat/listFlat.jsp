@@ -1,32 +1,8 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<title>Bootstrap Example</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet"
-	href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-<link rel="stylesheet"
-	href="https://cdn.datatables.net/1.10.19/css/dataTables.jqueryui.min.css">
 
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script
-	src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js">
-	
-</script>
-<script
-	src="https://cdn.datatables.net/1.10.19/js/dataTables.jqueryui.min.js"></script>
-<script
-	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<head>
 <script type="text/javascript">
 	$(document).ready(function() {
-		$('#example').DataTable();
+		$('#listflat').DataTable();
 	});
 </script>
 </head>
@@ -85,7 +61,7 @@
 			</div>
 		</form>
 		<div>
-			<table id="example" class="display" style="width: 100%">
+			<table id="listflat" class="display" style="width: 100%">
 				<thead>
 					<tr>
 						<th>Name</th>
@@ -240,4 +216,4 @@
 		</div>
 	</div>
 </body>
-</html>
+

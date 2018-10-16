@@ -1,41 +1,14 @@
-<%@page pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<!DOCTYPE html>
-<html lang="en">
 <head>
-<title>Bootstrap Example</title>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/> 
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet"
-	href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-<link rel="stylesheet"
-	href="https://cdn.datatables.net/1.10.19/css/dataTables.jqueryui.min.css">
-
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script
-	src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js">
-	
-</script>
-<script
-	src="https://cdn.datatables.net/1.10.19/js/dataTables.jqueryui.min.js"></script>
-<script
-	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script type="text/javascript">
 $(document).ready(function() {
-	$('#farm_tbl').DataTable();
+	$('#listfarm').DataTable();
 });
 </script>
 </head>
 <body>
 	<jsp:include page="addFarm.jsp"></jsp:include>
-	
-	
 		<%@include file="../header.jsp" %>
 				
-	
 	<div class="container">
 		<form action="/house">
 			<div class="form-group">
@@ -88,7 +61,7 @@ $(document).ready(function() {
 			</div>
 		</form>
 		<div>
-			<table id="farm_tbl" class="display" style="width: 100%">
+			<table id="listfarm" class="display" style="width: 100%">
 				<thead>
 					<tr>
 						<th>Name</th>
@@ -162,7 +135,7 @@ $(document).ready(function() {
 						<td>Edinburgh</td>
 						<td>35</td>
 						<td>2012/09/26</td>
-						<td>$217,500</td>
+						<tdR>$217,500</td>
 					</tr>
 					<tr>
 						<td>Jenette Caldwell</td>
@@ -243,4 +216,3 @@ $(document).ready(function() {
 		</div>
 	</div>
 </body>
-</html>

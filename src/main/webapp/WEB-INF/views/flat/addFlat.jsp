@@ -1,11 +1,6 @@
 <!-- Modal -->
-<<<<<<< HEAD
-<div id="myModal" class="modal fade" role="dialog" style="width: 100%">
-	<div class="modal-dialog" style="width: 64%">
-=======
 <div id="addFlat" class="modal fade" role="dialog" style="width: 100%">
 	<div class="modal-dialog" style="width: 60%;">
->>>>>>> 3059f191870987ce0b1da3031ca7d2e25097bbcb
 
 		<!-- Modal content-->
 		<div class="modal-content">

@@ -1,5 +1,4 @@
 <!-- Modal -->
-
 <div id="addFarm" class="modal fade" role="dialog" style="width: 100%">
 	<div class="modal-dialog" style="width: 60%;">
 
@@ -106,4 +105,3 @@
 		
 	</div>
 
-</div>
