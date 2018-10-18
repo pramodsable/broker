@@ -1,21 +1,3 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
-<script type="text/javascript">
-	$(document).ready(function() {
-		$('#listhouse').DataTable();
-		var lang = {};
-		lang["en"] = {
-			add_Home : "Add Home",
-		};
-		lang["es"] = {
-				add_Home : "Hola Mundo!",
-		};
-		CurrentLang="en";
-		// later somewhere down in my code:
-// 		alert(lang[CurrentLang].hello_world);
-	});
-</script>
-</head>
 <body>
 	<jsp:include page="addHouse.jsp"></jsp:include>
 	<%@include file="../header.jsp" %>
@@ -255,4 +237,3 @@
 
 </script>
 </body>
-</html>

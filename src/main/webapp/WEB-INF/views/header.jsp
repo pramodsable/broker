@@ -37,7 +37,7 @@
 						<div class="dropdown-menu">
 							<ul>
 								<%-- <li><a href="${pageContext.request.contextPath}/house">HOME</a></li> --%>
-								<li><a href="<%=request.getContextPath()%>/house">House</a></li>
+								<li><a href="#" onclick="getListHouse();">House******</a></li>
 								<li><a href="<%=request.getContextPath()%>/flat">Flat</a></li>
 								<li><a href="<%=request.getContextPath()%>/farm">Farm</a></li>
 								<li><a href="<%=request.getContextPath()%>/rowHouse">Plot
