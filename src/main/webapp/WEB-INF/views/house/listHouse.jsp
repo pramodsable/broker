@@ -25,7 +25,7 @@
 				<div class="row">
 					<div class="col-md-4">
 						<div>
-							<div class="col-md-6">
+							<div class="col-md-5">
 								<label>First Name</label>
 							</div>
 							<div class="col-md-6">
@@ -35,7 +35,7 @@
 					</div>
 					<div class="col-md-4">
 						<div>
-							<div class="col-md-6">
+							<div class="col-md-5">
 								<label>Last Name</label>
 							</div>
 							<div class="col-md-6">
@@ -56,13 +56,14 @@
 				</div>
 			</div>
 			<div class="form-group">
-				<div class="row">
+				<div class="row" style="">
 					<div class="col-md-8"></div>
+					
 					<div class="col-md-4">
-						<div class="col-md-6">
+						<div class="col-md-3 col-xs-2">
 							<button type="submit" class="btn btn-success">Search</button>
 						</div>
-						<div class="col-md-6">
+						<div class="col-md-3 col-xs-2">
 							<button type="button" class="btn btn-primary" data-toggle="modal"
 								data-target="#addHouse">Create</button>
 						</div>
@@ -226,9 +227,32 @@
 		</div>
 	</div>
 	<script type="text/javascript">
-$(document).ready(function() {
-	$('#listhouse').DataTable();
-});
+	
+	$(document).ready(function() {
+		var table = $('#listhouse').DataTable();
+	    // Setup - add a text input to each footer cell
+// 	    $('#listhouse tfoot th').each( function () {
+// 	        var title = $(this).text();
+// 	        $(this).html( '<input type="text" placeholder="Search '+title+'" />' );
+// 	    } );
+	 
+	    // DataTable
+	    
+	 
+	    // Apply the search
+	    table.columns().every( function () {
+	        var that = this;
+	 
+	        $( 'input', this.footer() ).on( 'keyup change', function () {
+	            if ( that.search() !== this.value ) {
+	                that
+	                    .search( this.value )
+	                    .draw();
+	            }
+	        } );
+	    } );
+	} );
+
 </script>
 </body>
 </html>

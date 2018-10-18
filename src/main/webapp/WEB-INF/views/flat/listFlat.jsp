@@ -1,10 +1,4 @@
-
 <head>
-<script type="text/javascript">
-	$(document).ready(function() {
-		$('#listflat').DataTable();
-	});
-</script>
 </head>
 <body>
 	<jsp:include page="addFlat.jsp"></jsp:include>
@@ -49,10 +43,10 @@
 				<div class="row">
 					<div class="col-md-8"></div>
 					<div class="col-md-4">
-						<div class="col-md-6">
+						<div class="col-md-3 col-xs-2">
 							<button type="submit" class="btn btn-success">Search</button>
 						</div>
-						<div class="col-md-6">
+						<div class="col-md-3 col-xs-2">
 							<button type="button" class="btn btn-primary" data-toggle="modal"
 								data-target="#addFlat">Create</button>
 						</div>
@@ -215,5 +209,10 @@
 			</table>
 		</div>
 	</div>
+	<script type="text/javascript">
+	$(document).ready(function() {
+		$('#listflat').DataTable();
+	});
+</script>
 </body>
 
