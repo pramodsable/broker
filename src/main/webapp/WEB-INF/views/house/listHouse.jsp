@@ -1,33 +1,3 @@
-
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<title>Bootstrap Example</title>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/> 
-<link rel="stylesheet"
-	href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-<link rel="stylesheet"
-	href="https://cdn.datatables.net/1.10.19/css/dataTables.jqueryui.min.css">
-
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script
-	src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js">
-	
-</script>
-
-<script
-	src="https://cdn.datatables.net/1.10.19/js/dataTables.jqueryui.min.js"></script>
-<script
-	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="<%=request.getContextPath()%>/resources/js/house/house.js"></script>
-
-</head>
 <body>
 	<jsp:include page="addHouse.jsp"></jsp:include>
 	<%@include file="../header.jsp" %>
@@ -37,7 +7,7 @@
 				<div class="row">
 					<div class="col-md-4">
 						<div>
-							<div class="col-md-6">
+							<div class="col-md-5">
 								<label>First Name</label>
 							</div>
 							<div class="col-md-6">
@@ -47,7 +17,7 @@
 					</div>
 					<div class="col-md-4">
 						<div>
-							<div class="col-md-6">
+							<div class="col-md-5">
 								<label>Last Name</label>
 							</div>
 							<div class="col-md-6">
@@ -68,13 +38,14 @@
 				</div>
 			</div>
 			<div class="form-group">
-				<div class="row">
+				<div class="row" style="">
 					<div class="col-md-8"></div>
+					
 					<div class="col-md-4">
-						<div class="col-md-6">
+						<div class="col-md-3 col-xs-2">
 							<button type="submit" class="btn btn-success">Search</button>
 						</div>
-						<div class="col-md-6">
+						<div class="col-md-3 col-xs-2">
 							<button type="button" class="btn btn-primary" data-toggle="modal"
 								data-target="#addHouse">Create</button>
 						</div>
@@ -83,7 +54,7 @@
 			</div>
 		</form>
 		<div>
-			<table id="example" class="display" style="width: 100%">
+			<table id="listhouse" class="display" style="width: 100%">
 				<thead>
 					<tr>
 						<th>Name</th>
@@ -237,5 +208,32 @@
 			</table>
 		</div>
 	</div>
+	<script type="text/javascript">
+	
+	$(document).ready(function() {
+		var table = $('#listhouse').DataTable();
+	    // Setup - add a text input to each footer cell
+// 	    $('#listhouse tfoot th').each( function () {
+// 	        var title = $(this).text();
+// 	        $(this).html( '<input type="text" placeholder="Search '+title+'" />' );
+// 	    } );
+	 
+	    // DataTable
+	    
+	 
+	    // Apply the search
+	    table.columns().every( function () {
+	        var that = this;
+	 
+	        $( 'input', this.footer() ).on( 'keyup change', function () {
+	            if ( that.search() !== this.value ) {
+	                that
+	                    .search( this.value )
+	                    .draw();
+	            }
+	        } );
+	    } );
+	} );
+
+</script>
 </body>
-</html>
