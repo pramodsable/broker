@@ -11,11 +11,14 @@
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script src="resources/js/jquery.min.js"></script>
 <script src="resources/js/jquery.dataTables.min.js">
-	
 </script>
-
 <script src="resources/js/bootstrap.min.js"></script>
 </head>
+<style>
+.breadcrumb >.active a {
+   color: black;
+}
+</style>
 <body>
 	<div>
 		<nav class="navbar navbar-inverse">
@@ -36,10 +39,10 @@
 						<div class="dropdown-menu">
 							<ul>
 								<%-- <li><a href="${pageContext.request.contextPath}/house">HOME</a></li> --%>
-								<li><a href="#" onclick="getListHouse();">House******</a></li>
+								<li><a href="<%=request.getContextPath()%>/house">House</a></li>
 								<li><a href="<%=request.getContextPath()%>/flat">Flat</a></li>
 								<li><a href="<%=request.getContextPath()%>/farm">Farm</a></li>
-								<li><a href="<%=request.getContextPath()%>/rowHouse">Plot
+								<li><a href="<%=request.getContextPath()%>/plot">Plot
 								</a></li>
 							</ul>
 						</div></li>
@@ -56,6 +59,7 @@
 			</div>
 		</div>
 		</nav>
-	</div>
+	
+</div>
 </body>
 </html>
