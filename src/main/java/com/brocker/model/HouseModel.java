@@ -44,11 +44,15 @@ public class HouseModel extends BaseModel implements Serializable {
 	/**
 	 * Customer address
 	 */
-	private Address customerAddress;
+	private AddressModel customerAddress;
 	/**
 	 * Property address
 	 */
-	private Address propertyAddress;
+	private AddressModel propertyAddress;
+	/**
+	 * local address
+	 */
+	String locality;
 	/**
 	 * propert Area
 	 */
@@ -119,7 +123,7 @@ public class HouseModel extends BaseModel implements Serializable {
 	/**
 	 * @return the customerAddress
 	 */
-	public Address getCustomerAddress() {
+	public AddressModel getCustomerAddress() {
 		return customerAddress;
 	}
 
@@ -127,14 +131,14 @@ public class HouseModel extends BaseModel implements Serializable {
 	 * @param customerAddress
 	 *            the customerAddress to set
 	 */
-	public void setCustomerAddress(Address customerAddress) {
+	public void setCustomerAddress(AddressModel customerAddress) {
 		this.customerAddress = customerAddress;
 	}
 
 	/**
 	 * @return the propertyAddress
 	 */
-	public Address getPropertyAddress() {
+	public AddressModel getPropertyAddress() {
 		return propertyAddress;
 	}
 
@@ -142,7 +146,7 @@ public class HouseModel extends BaseModel implements Serializable {
 	 * @param propertyAddress
 	 *            the propertyAddress to set
 	 */
-	public void setPropertyAddress(Address propertyAddress) {
+	public void setPropertyAddress(AddressModel propertyAddress) {
 		this.propertyAddress = propertyAddress;
 	}
 
@@ -279,6 +283,21 @@ public class HouseModel extends BaseModel implements Serializable {
 	 */
 	public void setFurnished(boolean furnished) {
 		this.furnished = furnished;
+	}
+
+	/**
+	 * @return the locality
+	 */
+	public String getLocality() {
+		return locality;
+	}
+
+	/**
+	 * @param locality
+	 *            the locality to set
+	 */
+	public void setLocality(String locality) {
+		this.locality = locality;
 	}
 
 }

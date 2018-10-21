@@ -1,5 +1,6 @@
 package com.brocker.model;
 
-public class Address {
+public class AddressModel {
 
+	
 }
