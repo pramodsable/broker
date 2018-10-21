@@ -14,13 +14,41 @@ import javax.persistence.Table;
 @Table(name = "BROC_HOUSE")
 public class HouseModel extends BaseModel implements Serializable {
 	/**
-	 * property name
+	 * customer name
 	 */
-	private String name;
+	private String firstName;
 	/**
-	 * Propert address
+	 * customer surname
 	 */
-	private String Address;
+	private String lastName;
+	/**
+	 * customer mobile
+	 */
+	private Long mobile;
+
+	/**
+	 * @return the mobile
+	 */
+	public Long getMobile() {
+		return mobile;
+	}
+
+	/**
+	 * @param mobile
+	 *            the mobile to set
+	 */
+	public void setMobile(Long mobile) {
+		this.mobile = mobile;
+	}
+
+	/**
+	 * Customer address
+	 */
+	private Address customerAddress;
+	/**
+	 * Property address
+	 */
+	private Address propertyAddress;
 	/**
 	 * propert Area
 	 */
@@ -59,33 +87,63 @@ public class HouseModel extends BaseModel implements Serializable {
 	private boolean furnished;
 
 	/**
-	 * @return the name
+	 * @return the firstName
 	 */
-	public String getName() {
-		return name;
+	public String getFirstName() {
+		return firstName;
 	}
 
 	/**
-	 * @param name
-	 *            the name to set
+	 * @param firstName
+	 *            the firstName to set
 	 */
-	public void setName(String name) {
-		this.name = name;
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
 	}
 
 	/**
-	 * @return the address
+	 * @return the lastName
 	 */
-	public String getAddress() {
-		return Address;
+	public String getLastName() {
+		return lastName;
 	}
 
 	/**
-	 * @param address
-	 *            the address to set
+	 * @param lastName
+	 *            the lastName to set
 	 */
-	public void setAddress(String address) {
-		Address = address;
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
+	/**
+	 * @return the customerAddress
+	 */
+	public Address getCustomerAddress() {
+		return customerAddress;
+	}
+
+	/**
+	 * @param customerAddress
+	 *            the customerAddress to set
+	 */
+	public void setCustomerAddress(Address customerAddress) {
+		this.customerAddress = customerAddress;
+	}
+
+	/**
+	 * @return the propertyAddress
+	 */
+	public Address getPropertyAddress() {
+		return propertyAddress;
+	}
+
+	/**
+	 * @param propertyAddress
+	 *            the propertyAddress to set
+	 */
+	public void setPropertyAddress(Address propertyAddress) {
+		this.propertyAddress = propertyAddress;
 	}
 
 	/**
