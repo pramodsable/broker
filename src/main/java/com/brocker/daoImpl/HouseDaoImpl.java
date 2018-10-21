@@ -14,10 +14,6 @@ public class HouseDaoImpl<T> extends GenericDao<HouseModel, Integer> implements 
 	 */
 	public List<HouseModel> listHouse() {
 		HouseModel houseModel = new HouseModel();
-		houseModel.setName("Avinash");
-		for (int i = 0; i < 10; i++) {
-			create(houseModel);
-		}
 		return getAll(houseModel);
 	}
 
